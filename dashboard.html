@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+       <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+<nav class="light-blue lighten-1">
+    <div class="nav-wrapper">
+    	<a id="logo-container" href="#" class="brand-logo"><img class="materialboxed" width="120" src="images/jessalogo.png"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      	<li class="active"><a href="dashboard.html">Inicio</a></li>
+        <li><a href="registroClientes.html">Clientes</a></li>
+        <li><a href="ventas.html">Ventas</a></li>
+        <li><a href="cobranzas.html">Cobranzas</a></li>
+        <li><a href="presupuestos.html">Presupuestos</a></li>
+        <li><a href="ordenes.html">Ordenes de servicio</a></li>
+        <li><a href="talleres.html">Talleres</a></li>
+        <li><a href="facturacion.html">Facturación</a></li>
+        <li><a href="reportes.html">Reportes</a></li>
+        <li><a href="index.html">Cerrar Sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="card-stats">
+                        <div class="row">
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content  green white-text">
+                                        <p class="card-stats-title"><i class="mdi-social-group-add"></i> Nuevos Clientes</p>
+                                        <h4 class="card-stats-number">566</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="green-text text-lighten-5">desde ayer</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action  green darken-2">
+                                        <div id="clients-bar"><canvas width="290" height="25" style="display: inline-block; width: 290px; height: 25px; vertical-align: top;"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content purple white-text">
+                                        <p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Total ventas</p>
+                                        <h4 class="card-stats-number">$8990.63</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">desde el mes pasado</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action purple darken-2">
+                                        <div id="sales-compositebar"><canvas width="286" height="25" style="display: inline-block; width: 286px; height: 25px; vertical-align: top;"></canvas></div>
+
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content blue-grey white-text">
+                                        <p class="card-stats-title"><i class="mdi-action-trending-up"></i> Desempeño de hoy</p>
+                                        <h4 class="card-stats-number">$806.52</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 80% <span class="blue-grey-text text-lighten-5">desde ayer</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action blue-grey darken-2">
+                                        <div id="profit-tristate"><canvas width="290" height="25" style="display: inline-block; width: 290px; height: 25px; vertical-align: top;"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content pink lighten-2 white-text">
+                                        <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i>Nuevos pedidos</p>
+                                        <h4 class="card-stats-number">1806</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-down"></i> 3% <span class="deep-purple-text text-lighten-5">desde el mes pasado</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action  pink darken-2">
+                                        <div id="invoice-line"><canvas style="display: inline-block; width: 282px; height: 25px; vertical-align: top;" width="282" height="25"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div id="card-widgets">
+                        <div class="row">
+
+                            <div class="col s12 m12 l4">
+                                <ul id="task-card" class="collection with-header">
+                                    <li class="collection-header cyan">
+                                        <h4 class="task-card-title">Mis tareas</h4>
+                                        <p class="task-card-date">Para hoy</p>
+                                    </li>
+                                    <li class="collection-item dismissable" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                        <input type="checkbox" id="task1">
+                                        <label for="task1" style="text-decoration: none;">Enviar pedido a Mexico. <a href="#" class="secondary-content"><span class="ultra-small">Hoy</span></a>
+                                        </label>
+                                        <span class="task-cat teal">Por concluir</span>
+                                    </li>
+                                    <li class="collection-item dismissable" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                        <input type="checkbox" id="task2">
+                                        <label for="task2" style="text-decoration: none;">Entregar producto a Jebla. <a href="#" class="secondary-content"><span class="ultra-small">Lunes</span></a>
+                                        </label>
+                                    </li>
+                                    <li class="collection-item dismissable" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                        <input type="checkbox" id="task3" checked="checked">
+                                        <label for="task3" style="text-decoration: line-through;">Modificar la orden del dia 27. <a href="#" class="secondary-content"><span class="ultra-small">Miercoles</span></a>
+                                        </label>
+                                        <span class="task-cat pink">Vence el miercoles</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div id="work-collections">
+                        <div class="row">
+                            <div class="col s12 m12 l6">
+                                <ul id="projects-collection" class="collection">
+                                    <li class="collection-item avatar">
+                                        <i class="mdi-file-folder circle light-blue darken-2"></i>
+                                        <span class="collection-header">Proyectos </span>
+                                        <p>Pendientes</p>
+                                        <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s6">
+                                                <p class="collections-title">Web App</p>
+                                                <p class="collections-content">AEC Company</p>
+                                            </div>
+                                            <div class="col s3">
+                                                <span class="task-cat cyan">Development</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div id="project-line-1"><canvas style="display: inline-block; width: 133px; height: 30px; vertical-align: top;" width="133" height="30"></canvas></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s6">
+                                                <p class="collections-title">Mobile App for Social</p>
+                                                <p class="collections-content">iSocial App</p>
+                                            </div>
+                                            <div class="col s3">
+                                                <span class="task-cat grey darken-3">UI/UX</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div id="project-line-2"><canvas style="display: inline-block; width: 133px; height: 30px; vertical-align: top;" width="133" height="30"></canvas></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/materialize.js"></script>
+</body>
+</html>
